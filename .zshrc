@@ -1,4 +1,8 @@
-source /usr/local/share/antigen/antigen.zsh
+if [[ ! -e ~/antigen.zsh ]]; then
+	curl -L git.io/antigen > antigen.zsh
+fi
+
+source ~/antigen.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
