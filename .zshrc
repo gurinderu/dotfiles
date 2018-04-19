@@ -15,7 +15,14 @@ alias vimdiff='nvim -d'
 export EDITOR=nvim
 alias vim=nvim
 alias vi=nvim -R
+
+
+if [[ -e ~/.alias ]]; then
+	source ~/.alias
+fi
+
 alias admin="cd ~/IdeaProjects/admin"
+alias fructose="cd ~/IdeaProjects/fructose"
 
 antigen use oh-my-zsh
 
