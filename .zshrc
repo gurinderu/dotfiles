@@ -2,6 +2,7 @@ source /usr/local/share/antigen/antigen.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
+ALIAS_FILE=~/.alias
 
 autoload bashcompinit
 bashcompinit
@@ -12,6 +13,10 @@ export EDITOR=nvim
 alias vim=nvim
 alias vi=nvim -R
 alias admin="cd ~/IdeaProjects/admin"
+
+if [ -f $ALIAS_FILE ]; then
+	source $ALIAS_FILE
+fi
 
 antigen use oh-my-zsh
 
