@@ -1,8 +1,4 @@
-if [[ ! -e ~/antigen.zsh ]]; then
-	curl -L git.io/antigen > antigen.zsh
-fi
-
-source ~/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -15,18 +11,15 @@ alias vimdiff='nvim -d'
 export EDITOR=nvim
 alias vim=nvim
 alias vi=nvim -R
-
-
-if [[ -e ~/.alias ]]; then
-	source ~/.alias
-fi
-
 alias admin="cd ~/IdeaProjects/admin"
-alias fructose="cd ~/IdeaProjects/fructose"
 
 antigen use oh-my-zsh
 
 antigen bundle git
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle brew
 antigen bundle cabal
