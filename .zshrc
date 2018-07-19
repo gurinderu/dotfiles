@@ -1,4 +1,4 @@
-source /usr/local/share/antigen/antigen.zsh
+source ~/.antigen/antigen.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
@@ -14,7 +14,6 @@ alias vimdiff='nvim -d'
 export EDITOR=nvim
 alias vim=nvim
 alias vi=nvim -R
-alias admin="cd ~/IdeaProjects/admin"
 
 if [ -f $ALIAS_FILE ]; then
 	source $ALIAS_FILE
