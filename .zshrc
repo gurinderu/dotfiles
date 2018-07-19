@@ -1,6 +1,8 @@
 source /usr/local/share/antigen/antigen.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history)
 POWERLEVEL9K_MODE='nerdfont-complete'
 ALIAS_FILE=~/.alias
 
@@ -41,4 +43,6 @@ antigen apply
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+export SBT_OPTS="-XX:MaxMetaspaceSize=512m -Xms1024m -Xmx1024m"
 
