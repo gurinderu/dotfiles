@@ -1,4 +1,6 @@
 source ~/.antigen/antigen.zsh
+source ~/.profile
+source "/Users/grinder/.sdkman/bin/sdkman-init.sh"
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
@@ -40,8 +42,11 @@ antigen bundle tmux
 antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen apply
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 
 export SBT_OPTS="-XX:MaxMetaspaceSize=512m -Xms1024m -Xmx1024m"
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/grinder/.sdkman"
+[[ -s "/Users/grinder/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/grinder/.sdkman/bin/sdkman-init.sh"
+export JAVA_HOME="~/.sdkman/candidates/java/current"
