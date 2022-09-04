@@ -40,6 +40,15 @@ with builtins;
       pkgs.git
       pkgs.nerdfonts
       pkgs.rustup
+      pkgs.bat
+      pkgs.tokei
+      pkgs.exa
+      pkgs.fd
+      pkgs.procs
+      pkgs.du-dust
+      pkgs.nushell
+      pkgs.git
+      pkgs.prettyping
     ];
     sessionVariables = {
       LANG = "en_US.UTF-8";
