@@ -49,6 +49,7 @@ with builtins;
       pkgs.nushell
       pkgs.git
       pkgs.prettyping
+      pkgs.teleport
     ];
     sessionVariables = {
       LANG = "en_US.UTF-8";
